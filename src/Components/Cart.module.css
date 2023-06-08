@@ -1,0 +1,42 @@
+.sidebar {
+  border: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  width: 30%;
+  right: 0;
+  height: 100vh;
+  z-index: 10;
+  color: white;
+}
+
+.title {
+  padding: 1em;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.cartInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quantityContainer {
+  display: flex;
+  gap: 0.8em;
+}
+
+.quantityButton {
+  width: 1.5em;
+}
+
+.total {
+  font-weight: bold;
+}
