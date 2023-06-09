@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+
+@layer components {
+  .cards {
+    @apply h-72 border border-solid border-black/25 rounded-lg flex flex-col justify-center items-center min-w-[12em] p-2 relative;
+  }
+  .add-cart {
+    @apply bg-gray-200 px-2 py-0.5 rounded hover:text-red-600;
+  }
+}

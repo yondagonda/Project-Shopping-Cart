@@ -16,44 +16,44 @@ const Cart = ({
 
   const renderPreview = (id) => {
     if (id === 'item1') {
-      return <img className={CartCSS.preview} alt="backpack" src={backpack} />;
+      return <img className="sm:h-24 h-14" alt="backpack" src={backpack} />;
     }
     if (id === 'item2') {
-      return (
-        <img className={CartCSS.preview} alt="white t shirt" src={whitet} />
-      );
+      return <img className="sm:h-24 h-14" alt="white t shirt" src={whitet} />;
     }
     if (id === 'item3') {
       return (
-        <img className={CartCSS.preview} alt="navy sweather" src={navysweat} />
+        <img className="sm:h-24 h-14" alt="navy sweather" src={navysweat} />
       );
     }
     if (id === 'item4') {
-      return <img className={CartCSS.preview} alt="rain jacket" src={jacket} />;
+      return <img className="sm:h-24 h-14" alt="rain jacket" src={jacket} />;
     }
   };
 
   return (
-    <div className={CartCSS.sidebar}>
-      <div className={CartCSS.title}>Your Shopping Cart</div>
-      <ul className={CartCSS.cartInfo}>
+    <div className="sidebar fixed right-0 h-screen z-10 bg-black/80 text-white hidden">
+      <div className="text-center sm:text-2xl font-bold p-4 mt-2">
+        Your Shopping Cart
+      </div>
+      <ul className="flex flex-col items-center gap-5 mt-3">
         {allItems.map((item) => {
           return (
-            <li className={CartCSS.cartItem} key={item.id}>
+            <li className="gap-7 flex items-center" key={item.id}>
               {renderPreview(item.id)}
-              <div className={CartCSS.itemDetails}>
+              <div className="items-center flex flex-col">
                 <div>{item.name}</div>
                 <div>${item.total}</div>
-                <div className={CartCSS.quantityContainer}>
+                <div className="flex gap-3">
                   <button
-                    className={CartCSS.quantityButton}
+                    className="w-5"
                     onClick={() => decrementQuantity(item.id)}
                   >
                     -
                   </button>
                   <div>{item.quantity}</div>
                   <button
-                    className={CartCSS.quantityButton}
+                    className="w-5"
                     onClick={() => incrementQuantity(item.id)}
                   >
                     +
@@ -63,15 +63,16 @@ const Cart = ({
             </li>
           );
         })}
-        <div className={CartCSS.total}>Total: ${grandTotal}</div>
+        <div className="font-bold sm:text-xl">Total: ${grandTotal}</div>
 
-        <div className={CartCSS.buttons}>
-          <button className={CartCSS.checkout}>Checkout</button>
+        <div className="flex flex-col gap-5">
+          <button className="border border-solid rounded px-5 py-1 hover:text-orange-300 text-xs sm:text-base">
+            Checkout
+          </button>
           <button
-            className={CartCSS.closebtn}
+            className="border border-solid rounded px-5 py-1 hover:text-orange-300 text-xs sm:text-base"
             onClick={() =>
-              (document.querySelector('.Cart_sidebar__yBOE6').style.display =
-                'none')
+              (document.querySelector('.sidebar').style.display = 'none')
             }
           >
             Close

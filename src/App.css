@@ -16,7 +16,16 @@
   --ff-primary: 'Poppins', sans-serif;
 }
 
-.container {
-  background-color: white;
-  height: 100vh;
+.sidebar {
+  width: clamp(300px, 30%, 400px);
+}
+
+@media screen and (max-width: 639px) {
+  .sidebar {
+    width: clamp(200px, 20%, 300px);
+  }
+}
+
+.products-container {
+  grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
 }

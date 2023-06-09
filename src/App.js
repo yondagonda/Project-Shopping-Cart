@@ -116,7 +116,7 @@ function App() {
       />
       <Navbar totalQuantity={totalQuantity} />
 
-      <div className="container">
+      <div className="h-screen">
         <Routes>
           <Route path="/Project-Shopping-Cart" element={<Home />} />
           <Route path="/Store" element={<Store logItem={logItem} />} />
