@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Project-Shopping-Cart/static/css/main.1f54fcbb.css",
-    "main.js": "/Project-Shopping-Cart/static/js/main.64c39a85.js",
+    "main.css": "/Project-Shopping-Cart/static/css/main.d6c14a1f.css",
+    "main.js": "/Project-Shopping-Cart/static/js/main.c1c32bab.js",
     "static/media/backpack.jpg": "/Project-Shopping-Cart/static/media/backpack.4d967701c696a45e2dc0.jpg",
     "static/media/bbluesweater.webp": "/Project-Shopping-Cart/static/media/bbluesweater.5a00dfe1a4f79df25e61.webp",
     "static/media/whitetshirt.jpg": "/Project-Shopping-Cart/static/media/whitetshirt.a9a4dd5dc5cce94dd8a8.jpg",
     "static/media/jacket.jpeg": "/Project-Shopping-Cart/static/media/jacket.0f106b643f9f0eb50873.jpeg",
     "index.html": "/Project-Shopping-Cart/index.html",
-    "main.1f54fcbb.css.map": "/Project-Shopping-Cart/static/css/main.1f54fcbb.css.map",
-    "main.64c39a85.js.map": "/Project-Shopping-Cart/static/js/main.64c39a85.js.map"
+    "main.d6c14a1f.css.map": "/Project-Shopping-Cart/static/css/main.d6c14a1f.css.map",
+    "main.c1c32bab.js.map": "/Project-Shopping-Cart/static/js/main.c1c32bab.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f54fcbb.css",
-    "static/js/main.64c39a85.js"
+    "static/css/main.d6c14a1f.css",
+    "static/js/main.c1c32bab.js"
   ]
 }
