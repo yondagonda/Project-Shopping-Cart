@@ -10,6 +10,7 @@ ul {
   display: flex;
   gap: 2em;
   list-style-type: none;
+  align-items: center;
 }
 
 a {
@@ -18,9 +19,30 @@ a {
 }
 
 .title {
-  font-size: 2.1em;
+  font-size: 2.3em;
+  padding: 0.1em;
+}
+
+.title:hover,
+a:hover,
+li:hover {
+  color: rgb(192, 230, 177);
 }
 
 li {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  display: flex;
+  gap: 0.5em;
+}
+
+.totalQuantity {
+  color: black;
+  padding: 0em 0.3em;
+  border-radius: 16px;
+  background-color: pink;
 }

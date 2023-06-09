@@ -9,17 +9,20 @@ import Navbar from './Components/Navbar';
 function App() {
   const [itemDetails, setItemDetails] = useState({
     id: '',
+    name: '',
     quantity: 0,
     price: 0,
     total: 0,
   });
   const [allItems, setAllItems] = useState([]);
   const [grandTotal, setGrandTotal] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   const logItem = (e) => {
     setItemDetails({
       id: e.target.dataset.id,
       quantity: 1,
+      name: e.target.dataset.name,
       price: +e.target.dataset.price,
       total: +e.target.dataset.price,
     });
@@ -91,7 +94,16 @@ function App() {
 
   useEffect(() => {
     calcGrandTotal();
+    calcTotalQuantity();
   }, [allItems]);
+
+  const calcTotalQuantity = () => {
+    let total = 0;
+    allItems.map((item) => {
+      total += item.quantity;
+    });
+    setTotalQuantity(total);
+  };
 
   return (
     <>
@@ -102,7 +114,7 @@ function App() {
         incrementQuantity={incrementQuantity}
         decrementQuantity={decrementQuantity}
       />
-      <Navbar />
+      <Navbar totalQuantity={totalQuantity} />
 
       <div className="container">
         <Routes>

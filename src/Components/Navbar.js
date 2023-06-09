@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavCSS from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ totalQuantity }) => {
   const displayCart = () => {
-    console.log('g');
+    document.querySelector('.Cart_sidebar__yBOE6').style.display = 'block';
   };
 
   return (
     <>
       <footer>
-        <div className={NavCSS.title}>FakeStore</div>
+        <Link to="/Project-Shopping-Cart" className={NavCSS.title}>
+          FakeStore
+        </Link>
         <nav>
           <ul>
             <li>
@@ -19,7 +21,12 @@ const Navbar = () => {
             <li>
               <Link to="/Store">Store</Link>
             </li>
-            <li onClick={displayCart}>Cart</li>
+            <li onClick={displayCart} className={NavCSS.cart}>
+              Cart
+              <div className={NavCSS.totalQuantity}>
+                {totalQuantity !== 0 ? totalQuantity : ''}
+              </div>
+            </li>
           </ul>
         </nav>
       </footer>
